@@ -1,0 +1,22 @@
+name: ClearlyAnnouncer
+version: '${project.version}'
+main: com.pepper.clearlyannouncer.Main
+api-version: 1.19
+prefix: ClearlyAnnouncer
+authors: [ Pepper_Sauce_ ]
+description: A plugin that you can broadcast easily
+commands:
+  announcer:
+    description: 使用指令公告
+    aliases: [ann, an]
+    permission: clearlyannouncer.announcer
+    permission-message: 【ClearlyAnnouncer】您沒有權限這麼做(使用公告指令)！
+  randomannouncer:
+    description: 設定隨機公告
+    aliases: [rann, ra]
+    permission: clearlyannouncer.randomannouncer
+    permission-message: 【ClearlyAnnouncer】您沒有權限這麼做(設定隨機公告指令)！
+permissions:
+  clearlyannouncer.announcer:
+    description: 指令公告權限
+    default: op
