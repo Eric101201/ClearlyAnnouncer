@@ -1,4 +1,4 @@
-package Commands;
+package com.pepper.clearlyannouncer.Commands;
 
 import com.pepper.clearlyannouncer.Main;
 import org.bukkit.*;

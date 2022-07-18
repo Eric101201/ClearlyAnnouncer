@@ -1,9 +1,11 @@
 package com.pepper.clearlyannouncer;
 
-import Commands.announcer;
-import Commands.randomannouncer;
+import com.pepper.clearlyannouncer.Commands.announcer;
+import com.pepper.clearlyannouncer.Commands.randomannouncer;
 import org.bukkit.plugin.java.JavaPlugin;
-import Config.LoadConfig;
+import com.pepper.clearlyannouncer.Config.LoadConfig;
+
+import java.util.Objects;
 
 public class Main extends JavaPlugin {
 
@@ -22,7 +24,7 @@ public class Main extends JavaPlugin {
     }
 
     public void setupCommands() {
-        getCommand("announcer").setExecutor(new announcer(this));
-        getCommand("randomannouncer").setExecutor(new randomannouncer(this));
+        Objects.requireNonNull(getCommand("announcer")).setExecutor(new announcer(this));
+        Objects.requireNonNull(getCommand("randomannouncer")).setExecutor(new randomannouncer(this));
     }
 }

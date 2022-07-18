@@ -1,19 +1,15 @@
-package Commands;
+package com.pepper.clearlyannouncer.Commands;
 
-import Config.LoadConfig;
 import com.pepper.clearlyannouncer.Main;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
-import java.util.List;
-import java.util.Objects;
 
 public class randomannouncer implements CommandExecutor {
 
@@ -39,13 +35,11 @@ public class randomannouncer implements CommandExecutor {
         ConsoleCommandSender console = server.getConsoleSender();
 
         //輸入
-        switch (args[0]) {
-            case "test1":
-                console.sendMessage(String.valueOf(randomannouncement.getList("Test") != null));
-                return true;
-            default:
-                sender.sendMessage("[ClearlyAnnouncer]您沒有輸入正確的參數！請檢查是否有打錯字或是大小寫不同。");
-                return true;
+        if ("test1".equals(args[0])) {
+            console.sendMessage(String.valueOf(randomannouncement.getList("Test") != null));
+            return true;
         }
+        sender.sendMessage("[ClearlyAnnouncer]您沒有輸入正確的參數！請檢查是否有打錯字或是大小寫不同。");
+        return true;
     }
 }

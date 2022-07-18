@@ -1,4 +1,4 @@
-package Config;
+package com.pepper.clearlyannouncer.Config;
 
 import com.pepper.clearlyannouncer.Main;
 
